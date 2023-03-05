@@ -1,3 +1,9 @@
+export interface Ingredient {
+  name: string;
+  amount: number;
+  measurement: string;
+}
+
 export function Ingredients() {
   return (
     <div>
