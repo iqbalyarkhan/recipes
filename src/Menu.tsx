@@ -1,18 +1,16 @@
-import { Ingredient } from "./Ingredients";
+import Recipe from "./Recipe";
 
-export interface Recipes {
-  data?: Recipe[] | null;
-}
-export interface Recipe {
-  name: string;
-  ingredients?: Ingredient[] | null;
-  description: string;
-}
-
-export function Menu(data: any[], title: string) {
+const Menu = ({ recipes, title }: any) => {
   return (
     <div>
-      <h2>Dummy Ingredients component</h2>
+      <header>
+        <h1>{title}</h1>
+      </header>
+      {recipes.map((recipe: any, i: any) => (
+        <Recipe key={i} {...recipe} />
+      ))}
     </div>
   );
-}
+};
+
+export default Menu;

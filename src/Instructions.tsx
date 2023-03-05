@@ -1,7 +1,12 @@
-export function Instructions() {
+const Instructions = ({ steps }: any) => {
   return (
     <div>
-      <h2>Dummy Instructions component</h2>
+      <h3>Steps: </h3>
+      {steps.map((step: any, i: any) => (
+        <p key={i}>{step}</p>
+      ))}
     </div>
   );
-}
+};
+
+export default Instructions;

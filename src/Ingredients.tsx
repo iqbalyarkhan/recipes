@@ -1,13 +1,12 @@
-export interface Ingredient {
-  name: string;
-  amount: number;
-  measurement: string;
-}
-
-export function Ingredients() {
+const Ingredients = ({ ingredients }: any) => {
   return (
     <div>
-      <h2>Dummy Ingredients component</h2>
+      <h4>Items you will need: </h4>
+      {ingredients.map((ingredient: any, i: any) => (
+        <li key={i}>{ingredient.name}</li>
+      ))}
     </div>
   );
-}
+};
+
+export default Ingredients;
