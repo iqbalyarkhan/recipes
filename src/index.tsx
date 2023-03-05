@@ -22,7 +22,7 @@ const data = [
     ],
   },
   {
-    name: "Fish Tacos",
+    name: "Fi",
     ingredients: [
       { name: "Whitefish", amount: 1, measurement: "l lb" },
       { name: "Cheese", amount: 1, measurement: "cup" },

@@ -19,4 +19,20 @@ const Summary = ({
   );
 };
 
+Summary.propTypes = {
+  title: titleValidator,
+  numberIngredients: numberValidation,
+  numberInstructions: numberValidation,
+};
+
+function titleValidator(title: string) {
+  return title.length >= 4
+    ? null
+    : new Error("Title must be at least 4 chars long");
+}
+
+function numberValidation(ingOrInst: number) {
+  return ingOrInst > 0 ? null : new Error("Number must be > 0");
+}
+
 export default Summary;
