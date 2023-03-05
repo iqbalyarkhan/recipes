@@ -1,13 +1,19 @@
 import Recipe from "./Recipe";
+import Summary from "./Summary";
 
 const Menu = ({ recipes, title }: { recipes: any[]; title: string }) => {
   return (
     <div>
-      <header>
-        <h1>{title}</h1>
-      </header>
-      {recipes.map((recipe: any, i: any) => (
-        <Recipe key={i} {...recipe} />
+      {recipes.map((recipe: any, i: any, j: any) => (
+        <>
+          <Summary
+            key={j}
+            title={recipe.name}
+            numberIngredients={recipe.ingredients.length}
+            numberInstructions={recipe.steps.length}
+          />
+          <Recipe key={i} {...recipe} />
+        </>
       ))}
     </div>
   );

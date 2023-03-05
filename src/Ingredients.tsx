@@ -1,4 +1,10 @@
-const Ingredients = ({ ingredients }: { ingredients: any[] }) => {
+export interface Ingredient {
+  name: string;
+  amount: number;
+  measurement: string;
+}
+
+const Ingredients = ({ ingredients }: { ingredients: Ingredient[] }) => {
   return (
     <div>
       <h4>Items you will need: </h4>

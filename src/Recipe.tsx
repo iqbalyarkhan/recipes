@@ -1,18 +1,15 @@
-import Ingredients from "./Ingredients";
+import Ingredients, { Ingredient } from "./Ingredients";
 import Instructions from "./Instructions";
 
 const Recipe = ({
-  name,
   ingredients,
   steps,
 }: {
-  name: string;
-  ingredients: any[];
+  ingredients: Ingredient[];
   steps: string[];
 }) => {
   return (
     <div>
-      <h2>{name}</h2>
       <ul>
         <Ingredients ingredients={ingredients} />
       </ul>
