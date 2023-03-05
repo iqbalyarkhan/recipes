@@ -1,4 +1,4 @@
-const Ingredients = ({ ingredients }: any) => {
+const Ingredients = ({ ingredients }: { ingredients: any[] }) => {
   return (
     <div>
       <h4>Items you will need: </h4>

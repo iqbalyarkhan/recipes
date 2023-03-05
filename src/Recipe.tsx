@@ -1,7 +1,15 @@
 import Ingredients from "./Ingredients";
 import Instructions from "./Instructions";
 
-const Recipe = ({ name, ingredients, steps }: any) => {
+const Recipe = ({
+  name,
+  ingredients,
+  steps,
+}: {
+  name: string;
+  ingredients: any[];
+  steps: string[];
+}) => {
   return (
     <div>
       <h2>{name}</h2>

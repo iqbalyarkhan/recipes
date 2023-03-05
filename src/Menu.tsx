@@ -1,6 +1,6 @@
 import Recipe from "./Recipe";
 
-const Menu = ({ recipes, title }: any) => {
+const Menu = ({ recipes, title }: { recipes: any[]; title: string }) => {
   return (
     <div>
       <header>

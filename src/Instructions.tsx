@@ -1,4 +1,4 @@
-const Instructions = ({ steps }: any) => {
+const Instructions = ({ steps }: { steps: any[] }) => {
   return (
     <div>
       <h3>Steps: </h3>
