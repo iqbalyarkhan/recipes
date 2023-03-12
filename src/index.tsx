@@ -1,5 +1,9 @@
 import ReactDOM from "react-dom/client";
+import Toolbar from "./Click";
+import MovingDot from "./Hooks";
+// import App, { Toolbar } from "./Click";
 import Menu from "./Menu";
+import StarRating from "./Star";
 
 const data = [
   {
@@ -41,4 +45,6 @@ const data = [
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(<Menu recipes={data} title="Today's Menu: " />);
+
+// root.render(<Menu recipes={data} title="Today's Menu: " />);
+root.render(<StarRating />);
